@@ -1,7 +1,7 @@
-<%= link_to "Create New Post", new_post_path , class: "btn btn-default"%>
-	
+<div class="conteiner-fluid">	
 <% @posts.each do |post| %>
-	
+	<div class="center-container">
+ 	<div class="col-md-4">
 	<h1><%= link_to post.title , post_path(post.id)%></h1>
 	<p>
 		Autor:<%= post.user.nickname %> |
@@ -13,4 +13,12 @@
 		<%= link_to "Edit", edit_post_path(post.id) %>
 		<%= link_to "Delete", post_path(post.id), data: {confim: 'Are you sure?'}, method: :delete %>
 	<% end %>
-<% end %>
+</div>
+ </div>
+ <% end %>
+ 
+ 	<div class="right-conteiner">
+ 		<%= link_to "Create New Post", new_post_path , class: "btn btn-default"%>
+ 	</div>
+ 	
+ </div> 

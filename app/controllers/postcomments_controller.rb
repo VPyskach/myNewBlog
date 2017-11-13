@@ -8,6 +8,16 @@ before_action :authenticate_user!
   	redirect_to post_path(params[:post_id])
   end
 
+  def edit
+   	
+   	redirect_to post_path(params[:post_id])
+   end
+ 
+   def destroy
+   	
+   	redirect_to post_path(params[:post_id])
+   end
+
 
 private
 

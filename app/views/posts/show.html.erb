@@ -1,4 +1,4 @@
-
+<div class="center-container text-center">
 <h1><%= @post.title %></h1>
 <p>
 	Autor:<%= @post.user.nickname %> |
@@ -13,7 +13,13 @@
 	<%= f.submit "Add Comment" %>
 <% end %>	
 
+</div>
+
+
 <% @comment.each do |comment| %>
+	<%= link_to "Edit", edit_post_postcomment_path(comment.id) %>
+ 		<%= link_to "Delete", post_postcomment_path(comment.id), data: {confim: 'Are you sure?'}, method: :delete %>
+ 	<% end %>
 <hr>
 <p>User <b><%= comment.user.nickname %></b> say: </p>
 <p><%= comment.comment %></p>
