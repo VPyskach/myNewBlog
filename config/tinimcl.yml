@@ -1,0 +1,5 @@
+toolbar:
+  - image | link | styleselect | bold italic forecolor | alighnleft aligncenter alignright | undo redo | removeformat |
+plugins:
+  - image
+  - link

@@ -5,6 +5,7 @@
 	Creeated at:<%= @post.created_at %> |
 	Update at:<%= @post.updated_at %>
 </p>
+<p><%= sanitize(@post.body)%></p>
 <p><%= @post.body %></p>
 
 <%= form_for :postcomment ,url: post_postcomments_path(@post.id), method: :post do |f| %>
